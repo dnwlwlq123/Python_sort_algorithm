@@ -26,7 +26,7 @@ class Stack:
         if self.backend == list:
             return self.list.pop()
         elif self.backend == LinkedList:
-            return self.linked_list.pop()
+            return self.linked_list.pop()#pop....
 
     def top(self):
         if self.backend == list:
