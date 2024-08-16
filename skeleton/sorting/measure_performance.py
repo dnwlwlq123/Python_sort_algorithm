@@ -62,6 +62,13 @@ if __name__ == '__main__':
     # end = time()
     # print(end - begin)
     begin = time()
-    measure_time(sorting.sort3_insert)
+    # measure_time(sorting.merge_sort)
+    # measure_time(sorting.quick_sort,)
+    # measure_time(sorting.sort3_insert)
+    measure_time(sorting.tim_sort)
+
     end = time()
     print(end - begin)
+
+    #merge_sort == 1.7944786548614502
+    #quick == 1.8971278667449951
