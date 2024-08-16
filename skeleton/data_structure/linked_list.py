@@ -58,6 +58,9 @@ class LinkedList:
         self.size -= 1
         return datum
 
+    def is_empty(self):
+        return self.size == 0
+
     def get_node(self, index):
         cnt = 0
         node = self.head
@@ -128,9 +131,15 @@ class DoublyLinkedList:
             cur = cur.next
         return ' <-> '.join(res)
 
+    def elements(self):
+        elements = []
+        cur = self.head
+        while cur:
+            elements.append(cur.datum)
+            cur = cur.next
+        return elements
 
 def test_linked_list():
-    print("테스트 시작")
 
     # 초기화
     elements = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
