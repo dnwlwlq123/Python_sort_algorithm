@@ -33,6 +33,7 @@ def insertion_sort(arr):
     return arr
 
 def merge_sort(lst, cmp = lambda x, y: x if x > y else y):
+<<<<<<< HEAD
     if len(lst) <= 1:
         return lst
     def merged(left,right):
@@ -61,6 +62,63 @@ final_lst_desc = merge_sort(my_list, cmp = lambda x, y: x if x<y else y)
 print(f'merge 오름차순 {final_lst_asc}')
 print(f'merge 내림차순 {final_lst_desc}')
 print()
+=======
+    lst1 = lst[:len(lst)//2]
+    lst2 = lst[len(lst)//2:]
+
+    left = merge_sort(lst1)
+    right = merge_sort(lst2)
+
+    
+        
+            
+    return merge(left, right)
+
+def merge(left, right, cmp = lambda x, y: x if x > y else y):
+    res = []
+    for l in left:
+        for r in right:
+            if l < r:
+                res.append(l)
+            elif l > r:
+                res.append(r)
+    return res 
+
+left = [1,3,4,7]
+right = [2,5,6,8,9,10,11]
+
+def merge_schin(left, right):
+    left_idx = 0 
+    right_idx = 0 
+
+    res = []
+
+    while left_idx <= len(left)-1 and right_idx <= len(right)-1:
+        print(left_idx, right_idx)
+        l = left[left_idx]
+        r = right[right_idx]
+
+        if l < r:
+            res.append(l)
+            left_idx += 1 
+        else:
+            res.append(r) 
+            right_idx += 1 
+        
+    
+    res += left[left_idx:]
+    res += right[right_idx:]
+
+    return res 
+
+
+
+print(merge_schin(left, right))
+
+
+
+
+>>>>>>> 42c02f46707c97c5bf63fa798721b7a722c9c53e
 
 
 def quick_sort(lst, cmp = lambda x, y: x if x > y else y):
