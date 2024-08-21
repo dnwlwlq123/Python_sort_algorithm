@@ -231,9 +231,6 @@ if __name__ == '__main__':
     v3 = Vertex(2, 3)
     v4 = Vertex(3, 4)
     v5 = Vertex(4, 5)
-    v6 = Vertex(5, 6)
-    v7 = Vertex(6, 7)
-    v8 = Vertex(7, 8)
 
     e1 = Edge(v1, v2) 
     e2 = Edge(v1, v3) 
@@ -242,20 +239,18 @@ if __name__ == '__main__':
     e5 = Edge(v3, v5) 
     e6 = Edge(v4, v5)
 
-    V = [v1, v2]
+    V = [v1, v2, v3, v4, v5]
     E = [e1]
 
     g1 = Graph(V, E, backend='adjacent_list')
     g1.show()
 
-    g1.add_vertex(v3)
+    g1.add_vertex(v2)
     g1.add_vertex(v4)
     g1.add_vertex(v5)
-    g1.add_vertex(v6)
-    g1.add_vertex(v7)
-    g1.add_vertex(v8)
     g1.show()
 
+    # g1.add_edge(e3)
     g1.add_edge(e2)
     g1.add_edge(e3)
     g1.add_edge(e4)
@@ -273,6 +268,8 @@ if __name__ == '__main__':
 
     # g1.remove_edge(e4)
     g1.remove_vertex(v2)
+    g1.show()
+    g1.remove_edge(e6)
     g1.show()
 
 
