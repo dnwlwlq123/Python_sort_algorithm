@@ -75,19 +75,16 @@ class Tree:
 
         return h
 
-    def __str__(self):
-        res = str(self.root.datum)
-
-        for idx, child in enumerate(self.children):
-            res += '\n'
-            if idx < len(self.children) - 1:
-                res += '├── '
-                res += str(child).replace('\n', '\n│   ')
-            else:
-                res += '└── '
-                res += str(child).replace('\n', '\n    ')
-
+    def s(t):
+        res = [str(t.root.datum)]
+        tab = '   '
+        for child in t.children:
+            part = child.s()
+            for line in part:
+                res.append(tab + line)
         return res
+    def __str__(self):
+        return '\n'.join(self.s())
 
 
 if __name__ == '__main__':
