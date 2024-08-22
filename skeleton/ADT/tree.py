@@ -55,8 +55,7 @@ class Tree:
         pass 
 
     def __str__(self):
-        pass 
-
+        ...
 
 if __name__ == '__main__':
     t1 = Tree({1: [
