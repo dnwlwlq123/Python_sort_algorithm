@@ -6,6 +6,18 @@ from data_structure.tree import Tree
 def get_directory_tree(directory, ignore_directories = [], ignore_extensions = []):
     pass 
 
+def make_tree(directory):
+    root = directory
+    children = []
+
+    for elem in os.listdir(directory):
+        path = f"{directory}/{elem}"
+        if os.path.isdir(path):
+            children.append(make_tree(directory))
+        else :
+            children.append(Tree(elem))
+    return Tree(root.split('/')[-1], children)
+
 
 if __name__ == '__main__':
     print(get_directory_tree('.'))

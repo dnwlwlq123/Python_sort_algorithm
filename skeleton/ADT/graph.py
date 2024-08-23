@@ -17,7 +17,6 @@ class Graph:
         # for e in E:
         #     assert isinstance(e, Edge)
         #     assert e.from_vertex in V
-        #     assert e.to_vertex in V
 
         self.V = V 
         self.E = E 
