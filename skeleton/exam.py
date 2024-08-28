@@ -43,12 +43,10 @@ import code
 
 def calculate_sum(a, b):
     result = a + b
-    # 디버깅을 위해 여기서 대화형 인터프리터를 시작합니다.
-    code.interact(local=locals())
+
     return result
 
 x = 10
 y = 20
-
 sum_result = calculate_sum(x, y)
 print(f"The sum is: {sum_result}")
